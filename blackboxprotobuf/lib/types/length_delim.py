@@ -278,8 +278,8 @@ def decode_message(buf, typedef=None, pos=0, end=None, group=False):
     if pos > end:
         raise decoder._DecodeError("Invalid Message Length")
     # Should never hit here as a group
-    if group:
-        raise ValueError("Got START_GROUP with no END_GROUP.")
+    # if group:
+    #     raise ValueError("Got START_GROUP with no END_GROUP.")
     return output, typedef, pos
 
 def encode_lendelim_message(data, typedef):
